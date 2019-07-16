@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.junaid.androidslide">
+    package="com.farmer.app.androidslide">
 
     <application
         android:allowBackup="true"
@@ -9,20 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="com.farmer.app.androidslide.Main4Activity"></activity>
+        <activity android:name="com.farmer.app.androidslide.Main3Activity" />
+        <activity android:name="com.farmer.app.androidslide.Main2Activity" />
         <activity
-            android:theme="@style/AppThemeNoActionBar"
-            android:name=".slide1.SliderActivity">
+            android:name="com.farmer.app.androidslide.slide1.SliderActivity"
+            android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:label="@string/home"
-            android:name=".MainActivity" />
-
+            android:name="com.farmer.app.androidslide.MainActivity"
+            android:label="@string/home" />
     </application>
 
 </manifest>

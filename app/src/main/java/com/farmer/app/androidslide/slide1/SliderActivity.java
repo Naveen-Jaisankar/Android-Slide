@@ -1,4 +1,4 @@
-package com.example.junaid.androidslide.slide1;
+package com.farmer.app.androidslide.slide1;
 
 import android.content.Intent;
 import android.support.v4.view.ViewPager;
@@ -10,11 +10,13 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.junaid.androidslide.MainActivity;
-import com.example.junaid.androidslide.R;
+import com.farmer.app.androidslide.Main2Activity;
+import com.farmer.app.androidslide.Main3Activity;
+import com.farmer.app.androidslide.Main4Activity;
+import com.farmer.app.androidslide.R;
 
 public class SliderActivity extends AppCompatActivity {
-    private Button btnSkip, btnNext;
+    private Button btnSkip /*btnNext*/;
     private ViewPager sViewPager;
     private LinearLayout dotsLayout;
     private TextView dots[];
@@ -45,11 +47,18 @@ public class SliderActivity extends AppCompatActivity {
 
     // btnSkipClick
     public  void btnSkipClick(View v) {
-        launchHomeScreen();
+        int current=getItem(1);
+        if(current==1){
+            launchHomeScreen1();
+        } if(current==2)
+        {launchHomeScreen2();
+        }if(current==3){
+            launchHomeScreen3();
+        }
     }
 
     //btnNextClick
-    public  void btnNextClick(View v) {
+    /*public  void btnNextClick(View v) {
         // checking for last page
         // if last page home screen will be launched
         int current = getItem(1);
@@ -60,12 +69,22 @@ public class SliderActivity extends AppCompatActivity {
         } else {
             launchHomeScreen();
         }
-    }
+    }*/
 
-    private void launchHomeScreen() {
-        startActivity(new Intent(this, MainActivity.class));
+    private void launchHomeScreen1() {
+        startActivity(new Intent(this, Main2Activity.class));
         finish();
     }
+    private void launchHomeScreen2() {
+        startActivity(new Intent(this, Main3Activity.class));
+        finish();
+    }
+    private void launchHomeScreen3() {
+        startActivity(new Intent(this, Main4Activity.class));
+        finish();
+    }
+
+
 
     private int getItem(int i) {
         return sViewPager.getCurrentItem() + i;
@@ -75,7 +94,7 @@ public class SliderActivity extends AppCompatActivity {
         sViewPager = (ViewPager) findViewById(R.id.sViewPager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
         btnSkip = (Button) findViewById(R.id.btn_skip);
-        btnNext = (Button) findViewById(R.id.btn_next);
+        /*btnNext = (Button) findViewById(R.id.btn_next);*/
     }
 
 
@@ -87,15 +106,15 @@ public class SliderActivity extends AppCompatActivity {
             addBottomDots(position);
 
             // changing the next button text 'NEXT' / 'GOT IT'
-            if (position == sliderAdapter.image_slide.length - 1) {
+            /*if (position == sliderAdapter.image_slide.length - 1) {
                 // last page. make button text to GOT IT
-                btnNext.setText(getString(R.string.start));
+                *//*btnNext.setText(getString(R.string.start));*//*
                 btnSkip.setVisibility(View.GONE);
             } else {
                 // still pages are left
-                btnNext.setText(getString(R.string.next));
+                *//*btnNext.setText(getString(R.string.next));*//*
                 btnSkip.setVisibility(View.VISIBLE);
-            }
+            }*/
         }
 
         @Override

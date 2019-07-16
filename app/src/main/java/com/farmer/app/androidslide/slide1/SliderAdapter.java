@@ -1,4 +1,4 @@
-package com.example.junaid.androidslide.slide1;
+package com.farmer.app.androidslide.slide1;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.junaid.androidslide.R;
+import com.farmer.app.androidslide.R;
 
 public class SliderAdapter extends PagerAdapter {
 
@@ -34,16 +34,16 @@ public class SliderAdapter extends PagerAdapter {
 
     // heading Array
     public String[] heading_slide ={
-            "EAT",
-            "SLEEP",
-            "CODE"
+            "Fertilizer",
+            "Pesticide",
+            "Community Page"
     };
 
     // description Array
     public String[] description_slide ={
-            "Splash Screen like professional with Animation in Android Studio",
-            "Splash Screen with Transition Animation",
-            " simple way to create Splash Scree"
+            "Calculate the amount of fertilizer here",
+            "To use proper Pesticide Click here",
+            " Share your thoughts with fellow Faremer"
     };
 
 

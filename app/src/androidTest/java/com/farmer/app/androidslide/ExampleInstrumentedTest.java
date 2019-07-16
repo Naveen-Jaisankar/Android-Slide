@@ -1,4 +1,4 @@
-package com.example.junaid.androidslide;
+package com.farmer.app.androidslide;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
